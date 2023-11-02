@@ -14,7 +14,7 @@ const Home = () => {
   return (
     <ScrollView contentInsetAdjustmentBehavior="automatic">
       <View style={styles.container}>
-        <Text style={styles.title}>ID Validation - Mini App</Text>
+        <Text style={styles.title}>Mini App - Registration</Text>
         <TouchableOpacity style={styles.button} onPress={() => navigation.navigate("SuperAppHome")}>
           <Text style={{color: '#FFF'}}>Go Home</Text>
         </TouchableOpacity>

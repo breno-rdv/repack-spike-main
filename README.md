@@ -17,9 +17,9 @@ And supports by default Hermes, Flipper, RN Refresh, etc.
 
 ## Implementation guide for this project
 
-The implementation will follow the approach of creating a SuperApp/MiniApps, in which there are two mini apps, `ag-boundary` and `mx-boundary` and the app will be bundled based on location, passing a flag when the application be build.
+The implementation will follow the approach of creating a SuperApp/MiniApp, in which there are two mini apps, `seller-boundary` and `buyer-boundary` and the app will be bundled based on profile, passing a flag when the application be build.
 
-Also, there will be an `id-validation` project that will be loaded into the SuperApp as being an external module.
+Also, there will be an `Registration Module` project that will be loaded into the SuperApp as being an external module.
 
 ### Bundling the application as is
 In this step, the SuperApp has been bundled with no configuration and without the external module, and below is the result:

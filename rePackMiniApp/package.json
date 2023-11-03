@@ -4,9 +4,9 @@
   "private": true,
   "scripts": {
     "android": "react-native webpack-start --port 9001 run-android",
-    "android:standalone": "STANDALONE=1 react-native webpack-start",
-    "ios": "react-native webpack-start --port 9000 run-ios",
-    "ios:standalone": "STANDALONE=1 react-native webpack-start run-ios",
+    "android:local": "npx react-native run-android",
+    "start:server": "STANDALONE=1 npx react-native webpack-start",
+    "ios": "npx react-native webpack-start --port 9000 run-ios",
     "lint": "eslint .",
     "test": "jest"
   },

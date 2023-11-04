@@ -17,20 +17,26 @@ And supports by default Hermes, Flipper, RN Refresh, etc.
 
 ## Implementation guide for this project
 
-The implementation will follow the approach of creating a SuperApp/MiniApp, in which there are two mini apps, `seller-boundary` and `buyer-boundary` and the app will be bundled based on profile, passing a flag when the application be build.
+The implementation will follow the approach of creating a SuperApp/MiniApp, in which there will be two modules, `seller-boundary` and `buyer-boundary` and the app will be bundled based on profile, passing a flag when the application be build.
 
-Also, there will be an `Registration Module` project that will be loaded into the SuperApp as being an external module.
+Also, there will be an `Registration App` project that will be loaded into the SuperApp as being an external module, the `rePackMiniApp aka Registration App`.
 
-### Bundling the application as is
-In this step, the SuperApp has been bundled with no configuration and without the external module, and below is the result:
+### Running the applications
+As aforementioned, there are two applications to be built, and the SuperApp relies on the bundle from the `Registration App`
+to be built correctly.
 
-** APK size **
+** Assuming everything is set up for Android/IOS environment. **
 
-![image](https://githubcloud.deere.com/storage/user/2006/files/44acdb2c-2817-41b5-9c4d-0b94f095cd40)
+The `Registration App` can be built as a standalone project, for doing so, navigate to its root folder, and:
 
-** Bundle analysis
+- First, install the dependencies, typing `npm install`;
 
-![image](https://githubcloud.deere.com/storage/user/2006/files/ee5482b9-00ff-49ba-991b-289093b4e756)
+- Then, start the bundle server, typing `npm run android:standalone`;
+
+- And finally, on a new terminal, run the application for the desired SO, e.g. `npm run android:local`;
+
+For running `Super App`, it is necessary to run the `Registration App` as a "bundler provider" and also run the `script server`,
+working as a "version manager" for bundles.
 
 ### Implementing lazy loading
 Loading script based on build options

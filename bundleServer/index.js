@@ -1,18 +1,13 @@
 var http = require('http');
+const { BundlerHandler } = require('./BundlerHandler');
 
 const PORT = 8081;
 
+const bundlerHandler = new BundlerHandler();
+
 const server = http.createServer((request, response) => {
 
-    if (request.url === '/api') {
-        response.writeHead(200, {'Content-Type': 'application/json'});
-
-        response.end(JSON.stringify({ response: 'OK'}));
-    } else {
-        response.writeHead(500, {'Content-Type': 'application/json'});
-
-        response.end(JSON.stringify({ response: 'not found'}));
-    }    
+    bundlerHandler.handle(request, response);  
 });
 
 server.listen(PORT, () => {

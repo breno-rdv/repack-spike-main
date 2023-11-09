@@ -22,8 +22,9 @@ class BundlerHandler extends BaseHandler {
 
             response.end(JSON.stringify({ response: 'OK'}));
             return;
+        } else {
+            return super.handle(request, response);
         }
-        return super.handle(request, response);
     }
 }
 

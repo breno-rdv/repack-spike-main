@@ -5,7 +5,7 @@ import {name as appName, localChunks} from '../app.json';
 
 ScriptManager.shared.addResolver(async (scriptId, caller) => {
   const containersResponse = await fetch(
-    'http://localhost:3000/repackminiapp?platform=android&appVersion=0.0.1',
+    'http://localhost:8081/repackminiapp?platform=android&appVersion=0.0.1',
   );
 
   const containers = await containersResponse.json();

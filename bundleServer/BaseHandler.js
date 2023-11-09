@@ -7,8 +7,8 @@ class BaseHandler {
     }
 
     handle(request, response) {
-        if (this.nextHandler) {
-            return this.nextHandler.handle(request);
+        if (this.#nextHandler) {
+            return this.#nextHandler.handle(request, response);
         }
 
         response.writeHead(500, {'Content-Type': 'application/json'})

@@ -15,5 +15,5 @@ const server = http.createServer((request, response) => {
 });
 
 server.listen(PORT, () => {
-    console.info(`Listening on port: ${PORT}`)
+    console.info(`Listening on port: ${PORT}`);
 });

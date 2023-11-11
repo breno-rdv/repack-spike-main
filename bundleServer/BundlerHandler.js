@@ -17,7 +17,7 @@ class BundlerHandler extends BaseHandler {
 
             let bundler = null; 
 
-            fs.readFile('./bundlerLocation.json', (err, data) => {
+            fs.readFile(path.resolve(__dirname, './bundlerLocation.json'), (err, data) => {
                 if (err) {
                     response.writeHead(500, {'Content-Type': 'text/plain'});
                     response.end('internal server error');
@@ -26,7 +26,7 @@ class BundlerHandler extends BaseHandler {
 
                 bundler = JSON.parse(data.toString());
 
-                const apiResponse = bundler[platform['platform']]?.[appVersion['appVersion']]
+                const apiResponse = bundler[platform['platform']]?.[appVersion['appVersion']];
 
                 if (!apiResponse) {
                     response.writeHead(404, {'Content-Type': 'text/plain'});

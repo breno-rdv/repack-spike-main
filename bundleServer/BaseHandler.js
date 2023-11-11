@@ -11,7 +11,7 @@ class BaseHandler {
             return this.#nextHandler.handle(request, response);
         }
 
-        response.writeHead(500, {'Content-Type': 'application/json'})
+        response.writeHead(404, {'Content-Type': 'application/json'})
 
         response.end(JSON.stringify({ response: 'not found'}));
 

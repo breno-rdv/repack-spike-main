@@ -31,12 +31,29 @@ The `Registration App` can be built as a standalone project, for doing so, navig
 
 - First, install the dependencies, typing `npm install`;
 
-- Then, start the bundle server, typing `npm run android:standalone`;
+- Then, start the repack server, typing `npm run android:standalone`;
 
 - And finally, on a new terminal, run the application for the desired SO, e.g. `npm run android:local`;
 
-For running `Super App`, it is necessary to run the `Registration App` as a "bundler provider" and also run the `script server`,
-working as a "version manager" for bundles.
+>> For running `Super App`, it is necessary to run the `Registration App` as a "bundler provider" and also run the `bundler server`,
+>> working as a "version manager" for bundles.
+
+Let's suppose we will run for Android platform, follow the steps below:
+
+- For running `Registration App`, go to `rePackMiniApp` root folder, and type:
+````bash
+npm run android
+````
+
+- For running `bundler server`, go to `bundlerServer` root folder, and type:
+````bash
+npm run start
+````
+
+And lastly, run `reaPackSuperApp` going to its root folder, and type:
+````bash
+
+````
 
 ### Implementing lazy loading
 Loading script based on build options

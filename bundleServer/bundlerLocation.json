@@ -1,8 +1,8 @@
 {
     "android": {
-        "0.0.1": "http://localhost:9001"
+        "0.0.1": "http://localhost:9001[name][ext]"
     },
     "ios": {
-        "0.0.1": "http://localhost:9002"
+        "0.0.1": "http://localhost:9002[name][ext]"
     }
 }
